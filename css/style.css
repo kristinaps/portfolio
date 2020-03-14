@@ -138,7 +138,6 @@ img {
 		color: lightgray;
 	}
 	#contenedorflechas{
-		float: right; 
 		position: relative; 
 		display: inline; 
 		bottom: 17px; 
@@ -187,7 +186,7 @@ img {
 
 
 		@media only screen and (max-width: 980px) {
-			.menupequeño{
+			.menumobile{
 				display: block !important;
 				float: right;
 				font-size: 30px;
@@ -210,11 +209,11 @@ img {
 				transition: 1s;
 			}
 
-			.listamenupequeño{
+			.listamenumobile{
 				margin-bottom: 40px;
 			}
 
-			.listamenupequeño h3{
+			.listamenumobile h3{
 				font-weight: normal;
 			}
 			.lineas{
