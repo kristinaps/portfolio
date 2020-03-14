@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🖥 Portfolio Cristina Pérez</title>
+     <script type="text/javascript">
+		var pixeles = 0;
+		//Slider
+		function derecha(){
+			if(pixeles != 257){
+				pixeles += 257;
+				document.getElementById('tabla').style.right = pixeles + "px";
+			}
+		}
+
+		function izquierda(){
+			if(pixeles != 0){
+				pixeles -= 257;
+				document.getElementById('tabla').style.right = pixeles + "px";
+			}
+		}
+
+		//Menu desplegable cuando es pequeño
+		function mostrarmenu(){
+			document.getElementById('menusegundoformato').style.top='0px';
+		}
+
+		function ocultarmenu(){
+			document.getElementById('menusegundoformato').style.top='-100%';
+		}
+	</script>
+</head>
+<body>
+    <header id="main-header">
+        <a id="logo-header" href="#">
+			<span class="site-name">KP.</span>
+        </a> <!-- / #logo-header -->
+        
+        <nav>
+            <ul id="menu">
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">My process</a></li>
+            </ul>
+        </nav> <!-- / #main-header -->
+        <i class="fas fa-bars menupequeño" onclick="mostrarmenu()"></i>
+    </header>
+    
+    <div id="maincontent">
+        <img src=images/Cris.png>
+		<div id="whoiam"> 
+                <h1>Hi! I'm Cristina Pérez,</h1>
+                <h2 id="titulo1">I´m <strong style="color: #74B0A5;">UX UI Designer</strong> at Tendam (Grupo Cortefiel), with a strong focus on <strong>E-commerce fashion retail.</strong></h2>
+               
+        </div>
+        
+        <div id="marcas">
+            <ul>
+				<img src=images/ctf.png>
+                <img src=images/pdh.png>
+                <img src=images/ws.png>
+                <img src=images/spf.png>
+                <img src=images/ff.png>
+                <img src=images/ctf.png>
+            </ul>
+        </div>
+
+        </div id="uxuiprojects"> 
+            <hr style="width: 134px; float: left; margin-left: -8px; border: 1px solid black;"/>
+            <h4 id="titulo2">UX UI FOR E-COMMERCE</h4>     
+            <div id="contenedorflechas">
+                <div class="flechas" onclick="izquierda()">←</div>
+                <div class="flechas" onclick="derecha()">→</div>
+        </div>
+        <table id="tabla"> 
+                <tr>
+                    <td><div class="contenedorgris"></div></td>
+                    <td><div class="contenedorgris"></div></td>
+                    <td><div class="contenedorgris"></div></td>
+                    <td><div class="contenedorgris"></div></td>
+                    <td><div class="contenedorgris"></div></td>
+                    <td><div class="contenedorgris"></div></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="contenedortexto">
+                        <h4>TENDAM DESIGN SYSTEMS</h4><p>Est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p><a style="color: gray" href="">Saber más</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="contenedortexto">
+                        <h4>TENDAM DESIGN SYSTEMS</h4><p>Est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p><a style="color: gray" href="">Saber más</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="contenedortexto">
+                        <h4>TENDAM DESIGN SYSTEMS</h4><p>Est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p><a style="color: gray" href="">Saber más</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="contenedortexto">
+                        <h4>TENDAM DESIGN SYSTEMS</h4><p>Est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p><a style="color: gray" href="">Saber más</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="contenedortexto">
+                        <h4>TENDAM DESIGN SYSTEMS</h4><p>Est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p><a style="color: gray" href="mailto:kristinaps12@gmail.com"></a>Saber más</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="contenedortexto">
+                        <h4>TENDAM DESIGN SYSTEMS</h4><p>Est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p><a style="color: gray" href="mailto:kristinaps12@gmail.com"></a>Saber más</a>
+                        </div>
+                    </td>
+                </tr>
+        </table>
+        <div id="accesoinferior">
+                <div class="botonesinferiores">
+                    <img class="iconos" src="images/emoji.png"><h5>Know more about me</h5></div>
+                <div class="botonesinferiores">
+                    <img class="iconos" src="images/laptop.png"><h5>Know my design´s process</h5></div>
+                <div class="botonesinferiores botoninferiorextra2">
+                    <img class="iconos" src="images/saludo.png">
+                    <a href="mailto:kristinaps12@gmail.com"><h5>Say hi! Click and send me an e-mail</a></h5> 
+                </div>
+        </div>
+            
+        </section>
+        <footer id="main-footer">
+            <p>&copy; 2020 <a href="http://kpdesign.com">kpdesign.com</a></p>
+        </footer> <!-- / #main-footer --> 
+
+    </div>
+	<div id="menumobile">
+		
+		<i class="fas fa-times menupequeño" style="color:white" onclick="ocultarmenu()"></i>
+		<ul style="list-style: none; margin-top: 110px; color:white; margin-left: -20px; font-weight: none">
+			<li class="listamenupequeño"><h3>Tendam Design Systems</h3></li>
+			<li class="listamenupequeño"><h3>Checkout process</h3></li>
+			<li class="listamenupequeño"><h3>Redesign Product Detail Page</h3></li>
+			<li class="listamenupequeño"><h3>Redesign Product List Page</h3></li>
+			<li class="listamenupequeño"><h3>Create your suit</h3></li>
+		</ul>
+		<hr class="lineas"/>
+		<div class="botonesinferiores2"><img class="iconos2" src="img/emoji-chica.png"><h3>ABOUT</h3></div>
+		<hr class="lineas"/>
+		<div class="botonesinferiores2"><img class="iconos2" src="img/ordenador.png"><h3>MY PROCESS</h3></div>
+		<hr class="lineas"/>
+	</div>
+
+
+</body>
+</html>
+

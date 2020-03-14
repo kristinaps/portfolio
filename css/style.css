@@ -1,0 +1,303 @@
+
+#main-header {
+	background: rgb(255, 255, 255);
+	color: white;
+	height: 80px;
+}	
+	.main-header a {
+		color: #282733;
+	}
+
+	/** Navegación*/
+nav {
+	float: right;
+}
+	nav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		padding-right: 20px;
+	}
+	
+		nav ul li {
+			display: inline-block;
+			line-height: 24px;
+		}
+			
+			nav ul li a {
+				display: block;
+				padding: 0 4px;
+				text-decoration: none;
+			}
+			
+				nav ul li a:hover {
+					background: #0b76a6;
+				}
+@font-face {
+	font-family: "Playfair Display Medium";
+	src: url("PlayfairDisplay-Medium.ttf");
+	}
+
+@font-face {
+	font-family: "Hind Regular";
+	src: url("Hind-Regular.ttf");
+	}
+
+@font-face {
+	font-family: "Hind Bold";
+	src: url("Hind-Bold.ttf");
+	}
+	
+h1 {
+	font-family:"Playfair Display Medium";
+	font-size: 40px;
+}
+
+h2 {
+	font-family:"Hind Regular";
+	font-size: 24px;
+}
+h3 {
+	font-family:"Hind Bold";
+	font-size: 24px;
+}
+h3 {
+	font-family:"Hind Bold";
+	font-size: 16px;
+}
+body{
+	overflow-x: hidden;
+}
+img {
+	height: fit-content;				
+	background-size: 346px;
+	background-position: right;
+	background-repeat: no-repeat;
+	width: auto;
+	float: right;
+}
+#marcas{
+	width: 40%;
+	float: left;
+  	height: 100px;
+	margin: 8px;
+}
+	  .marcas{
+		height: 40px;
+		margin-right: 12px;
+		}
+
+
+	.contenedorgris{
+					background-color: lightgray;
+					width: 280px;
+					height: 400px;
+				}
+
+				
+	.botonesinferiores{
+					display: inline-flex;
+					border: 1.5px solid lightgray;
+					width: 418px;
+					height: 64px;
+					margin-left: 10px;
+					text-indent: 30px;
+					cursor:pointer;
+	}
+	#maincontent{
+		float: right;
+	}
+	#whoiam{
+		text-align: left;
+		margin-left: 60px;
+		padding: 60px;
+	}
+	#titulo2{
+		margin-left: 24px;
+		position: relative;
+		letter-spacing: 8px;
+		display: inline;
+	}
+
+	#tabla{
+		border-spacing: 22px;
+		position: relative;
+		right: 0px;
+		transition: 1s;
+	}
+	.flechas{
+		font-size: 34px;
+		padding: 0px 15px 0px 15px;
+		display: inline;
+		margin-right: 19px;
+		background-color: rgba(0,0,1,0.5);
+		color: white;
+		cursor: pointer;
+	}
+	.flechas:hover{
+		color: lightgray;
+	}
+	#contenedorflechas{
+		float: right; 
+		position: relative; 
+		display: inline; 
+		bottom: 17px; 
+		margin-right: 114px;
+	}
+
+	.iconos{
+		width: 40px;
+		float: left;
+		height: 40px;
+		padding: 8px 8px 8px 30px;
+	}
+
+	.botonesinferiores{
+		display: inline-flex;
+		border: 1.5px solid lightgray;
+		width: 32%;
+		height: fit-content;
+		margin-left: 10px;
+		text-indent: 30px;
+		cursor:pointer;
+	}
+	.botonesinferiores:hover{
+		box-shadow: 1px 2px 10px 3px rgba(0,0,0,0.2);
+	}
+
+#main-footer {
+		background: #333;
+		color: white;
+		text-align: center;
+		padding: 20px;
+		margin-top: 40px;
+		
+		width: 100%;
+	}
+		#main-footer p {
+			margin: 0;
+		}
+		
+		#main-footer a {
+			color: white;
+		}
+
+
+
+
+
+		@media only screen and (max-width: 980px) {
+			.menupequeño{
+				display: block !important;
+				float: right;
+				font-size: 30px;
+	    		padding: 14px;
+	    		cursor:pointer;
+			}
+			#menu{
+				display: none;
+			}
+
+			#menumobile{
+				width: 100%;
+				height: 100%;
+				background-color: rgb(31, 30, 29);
+				position: fixed;
+				top: -100%;
+				left: 0px;
+				z-index: 1;
+				display: block;
+				transition: 1s;
+			}
+
+			.listamenupequeño{
+				margin-bottom: 40px;
+			}
+
+			.listamenupequeño h3{
+				font-weight: normal;
+			}
+			.lineas{
+				color:white;
+			}
+			.iconos2{
+				width: 40px;
+				height: 40px;
+				padding: 8px 8px 8px 30px;
+			}
+
+			.botonesinferiores2{
+				display: inline-flex;
+				color: white;
+				text-indent: 20px;
+			}
+
+			#contenedor1{
+				background-position-x: 90px;
+			}
+
+			#subcontendor1 {
+			    text-align: left;
+			    margin-left: -41px;
+			    padding: 60px;
+			    width: 100%;
+			}
+
+			#subcontendor1 h2{
+			    width: 155px;
+			}
+			#titulo1{
+				width: 285px;
+			}
+			.marcas{
+				width: 27%;
+			}
+			#contenedormarcas{
+				width: 100%;
+			}
+			#contenedorflechas{
+				display: none;
+			}
+			#contenedor2 hr{
+				width:45px !important;
+			}
+
+			#titulo2 {
+			    font-size: 16px;
+			    letter-spacing: 3px;
+			}
+			.botonesinferiores{
+				margin-left: 0px;
+			    width: 105%;
+			    position: relative;
+			    left: -8px;
+			    border: 0px;
+			    border-top: 2px solid lightgray;
+			    font-size: 20px;
+			}
+
+			#botoninferiorextra{
+				margin-left: 0px;
+			    width: 105%;
+			    position: relative;
+			    left: -8px;
+			    border: 0px;
+			    border-top: 2px solid lightgray;
+			    font-size: 20px;
+			    text-indent: 30px;
+			}    
+
+			#botoninferiorextra div{
+				display: grid;
+    			line-height: 0px;
+			}
+			
+			#botoninferiorextra div span{
+				font-size: 16px;
+			}
+
+			.botoninferiorextra2{
+				display: none;
+			}
+
+		}

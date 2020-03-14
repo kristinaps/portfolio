@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<style type="text/css">
+		body{
+			overflow-x: hidden;
+		}
+		#logo{
+			width: 60px;
+		}
+		#menu{
+			display: -webkit-inline-box;
+    		list-style: none;
+    		float: right;
+		}
+		.submenu{
+			width: 80px;
+			font-weight: bold;
+			cursor:pointer;
+		}
+		#titulo1{
+			font-weight: normal;
+			width: 390px;
+		}
+		.marcas{
+			height: 40px;
+			margin-right: 12px;
+		}
+		#contenedor1{
+			width: 100%;
+		    height: fit-content;
+		    background-image: url(img/chica.png);
+		    background-size: 346px;
+		    background-position: right;
+		    background-position-y: -139px;
+		    background-repeat: no-repeat;
+		    -webkit-filter: grayscale(100%);
+		}
+		#subcontendor1{
+			text-align: left;
+			margin-left: 60px;
+			padding: 60px;
+		}
+		#titulo2{
+			margin-left: 18px;
+		    position: relative;
+		    letter-spacing: 6px;
+		    display: inline;
+		}
+		.flechas{
+			font-size: 34px;
+		    padding: 0px 15px 0px 15px;
+		    display: inline;
+		    margin-right: 19px;
+		    background-color: rgba(0,0,1,0.5);
+		    color: white;
+		    cursor: pointer;
+		}
+
+		.flechas:hover{
+			color: lightgray;
+		}
+		.contenedorgris{
+			background-color: lightgray;
+			width: 257px;
+    		height: 358px;
+		}
+		#tabla{
+			border-spacing: 22px;
+			position: relative;
+			right: 0px;
+			transition: 1s;
+		}
+
+		.iconos{
+			width: 40px;
+			float: left;
+			height: 40px;
+			padding: 8px 8px 8px 30px;
+		}
+
+		.botonesinferiores{
+			display: inline-flex;
+			border: 1.5px solid lightgray;
+			width: 32%;
+			height: fit-content;
+			margin-left: 10px;
+			text-indent: 30px;
+			cursor:pointer;
+		}
+
+		.menupequeño{
+			display: none !important;
+		}
+
+		.botonesinferiores:hover{
+			box-shadow: 1px 2px 10px 3px rgba(0,0,0,0.2);
+		}
+
+		#pie{
+			background-color: black;
+		    width: 100%;
+		    height: 50px;
+		    position: absolute;
+		    left: 0px;
+		    margin-top: 140px;
+		}
+
+		#menusegundoformato{
+			display: none;
+		}
+
+		#contenedorflechas{
+			float: right; 
+			position: relative; 
+			display: inline; 
+			bottom: 17px; 
+			margin-right: 114px;
+		}
+
+		@media only screen and (max-width: 600px) {
+			.menupequeño{
+				display: block !important;
+				float: right;
+				font-size: 30px;
+	    		padding: 14px;
+	    		cursor:pointer;
+			}
+			#menu{
+				display: none;
+			}
+
+			#menusegundoformato{
+				width: 100%;
+				height: 100%;
+				background-color: rgb(31, 30, 29);
+				position: fixed;
+				top: -100%;
+				left: 0px;
+				z-index: 1;
+				display: block;
+				transition: 1s;
+			}
+
+			.listamenupequeño{
+				margin-bottom: 40px;
+			}
+
+			.listamenupequeño h3{
+				font-weight: normal;
+			}
+			.lineas{
+				color:white;
+			}
+			.iconos2{
+				width: 40px;
+				height: 40px;
+				padding: 8px 8px 8px 30px;
+			}
+
+			.botonesinferiores2{
+				display: inline-flex;
+				color: white;
+				text-indent: 20px;
+			}
+
+			#contenedor1{
+				background-position-x: 90px;
+			}
+
+			#subcontendor1 {
+			    text-align: left;
+			    margin-left: -41px;
+			    padding: 60px;
+			    width: 100%;
+			}
+
+			#subcontendor1 h2{
+			    width: 155px;
+			}
+			#titulo1{
+				width: 285px;
+			}
+			.marcas{
+				width: 27%;
+			}
+			#contenedormarcas{
+				width: 100%;
+			}
+			#contenedorflechas{
+				display: none;
+			}
+			#contenedor2 hr{
+				width:45px !important;
+			}
+
+			#titulo2 {
+			    font-size: 16px;
+			    letter-spacing: 3px;
+			}
+			.botonesinferiores{
+				margin-left: 0px;
+			    width: 105%;
+			    position: relative;
+			    left: -8px;
+			    border: 0px;
+			    border-top: 2px solid lightgray;
+			    font-size: 20px;
+			}
+
+			#botoninferiorextra{
+				margin-left: 0px;
+			    width: 105%;
+			    position: relative;
+			    left: -8px;
+			    border: 0px;
+			    border-top: 2px solid lightgray;
+			    font-size: 20px;
+			    text-indent: 30px;
+			}    
+
+			#botoninferiorextra div{
+				display: grid;
+    			line-height: 0px;
+			}
+			
+			#botoninferiorextra div span{
+				font-size: 16px;
+			}
+
+			.botoninferiorextra2{
+				display: none;
+			}
+
+		}
+	</style>
+	<script type="text/javascript">
+		var pixeles = 0;
+		//Slider
+		function derecha(){
+			if(pixeles != 257){
+				pixeles += 257;
+				document.getElementById('tabla').style.right = pixeles + "px";
+			}
+		}
+
+		function izquierda(){
+			if(pixeles != 0){
+				pixeles -= 257;
+				document.getElementById('tabla').style.right = pixeles + "px";
+			}
+		}
+
+		//Menu desplegable cuando es pequeño
+		function mostrarmenu(){
+			document.getElementById('menusegundoformato').style.top='0px';
+		}
+
+		function ocultarmenu(){
+			document.getElementById('menusegundoformato').style.top='-100%';
+		}
+	</script>
+	<link rel="stylesheet" href="estilos/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+</head>
+<body>
+	<img src="https://image.shutterstock.com/image-vector/creative-strong-initial-letter-kp-260nw-1279614748.jpg" id="logo"/>
+	<ul id="menu">
+		<li class="submenu">Projects</li>
+		<li class="submenu">About</li>
+		<li class="submenu">My process</li>
+	</ul>
+	<i class="fas fa-bars menupequeño" onclick="mostrarmenu()"></i>
+	<div id="contenedor1">
+		<div id="subcontendor1">
+			<h2>Hi! I`m Cristina Pérez,</h2>
+			<h3 id="titulo1">I´m <strong style="color: slategray;">UX UI Designer</strong> at Tendam (Grupo Cortefiel), with a strong focus on <strong>E-commerce fashion retail.</strong></h3>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<div id="contenedormarcas">
+				<img class="marcas" src="img/cortefiel.jpg">
+				<img class="marcas" src="img/pedro.png">
+				<img class="marcas" style="height: 10px; margin-bottom: 16px;" src="img/womens.jpg">
+				<img class="marcas" src="img/springfield.gif">
+				<img class="marcas" style="height: 10px; margin-bottom: 16px;" src="img/womens.jpg">
+				<img class="marcas" style="margin-bottom: 5px;" src="img/fifty.jpg">
+			</div>
+		</div>
+	</div>
+	<div id="contenedor2">
+		<hr style="width: 134px; float: left; margin-left: -8px; border: 1px solid black;"/>
+		<h3 id="titulo2">UX UI FOR E-COMMERCE</h3>
+		<div id="contenedorflechas">
+			<div class="flechas" onclick="izquierda()">←</div>
+			<div class="flechas" onclick="derecha()">→</div>
+		</div>
+		<table id="tabla">
+			<tr>
+				<td><div class="contenedorgris"></div></td>
+				<td><div class="contenedorgris"></div></td>
+				<td><div class="contenedorgris"></div></td>
+				<td><div class="contenedorgris"></div></td>
+				<td><div class="contenedorgris"></div></td>
+			</tr>
+			<tr>
+				<td>
+					<div class="contenedortexto">
+					<h4>TENDAM DESIGN SYSTEMS</h4><p>Est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p><a style="color: gray" href="">Saber más</a>
+					</div>
+				</td>
+				<td>
+					<div class="contenedortexto">
+					<h4>TENDAM DESIGN SYSTEMS</h4><p>Est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p><a style="color: gray" href="">Saber más</a>
+					</div>
+				</td>
+				<td>
+					<div class="contenedortexto">
+					<h4>TENDAM DESIGN SYSTEMS</h4><p>Est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p><a style="color: gray" href="">Saber más</a>
+					</div>
+				</td>
+				<td>
+					<div class="contenedortexto">
+					<h4>TENDAM DESIGN SYSTEMS</h4><p>Est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p><a style="color: gray" href="">Saber más</a>
+					</div>
+				</td>
+				<td>
+					<div class="contenedortexto">
+					<h4>TENDAM DESIGN SYSTEMS</h4><p>Est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p><a style="color: gray" href="mailto:camaxo1234@gmail.com">Saber más</a>
+					</div>
+				</td>
+			</tr>
+		</table>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<div id="contenedorinferior">
+			<div class="botonesinferiores">
+				<img class="iconos" src="img/emoji-chica.png"><h5>Know more about me</h5><i class="fas fa-angle-right"></i>
+			</div>
+			<div class="botonesinferiores"><img class="iconos" src="img/ordenador.png"><h5>Know my design´s process</h5></div>
+			<div class="botonesinferiores botoninferiorextra2"><img class="iconos" src="img/mano.png"><h5>Say hi! Click and send me an e-mail</h5></div>
+
+			<div id="botoninferiorextra"><img class="iconos" src="img/mano.png"><div><h5>Say hi!</h5><span>kristinaps12@gmail.com</span></div></div>
+		</div>
+	</div>
+	<div id="menusegundoformato">
+		<img src="https://image.shutterstock.com/image-vector/creative-strong-initial-letter-kp-260nw-1279614748.jpg" id="logo"/>
+		<i class="fas fa-times menupequeño" style="color:white" onclick="ocultarmenu()"></i>
+		<ul style="list-style: none; margin-top: 110px; color:white; margin-left: -20px; font-weight: none">
+			<li class="listamenupequeño"><h3>Tendam Design Systems</h3></li>
+			<li class="listamenupequeño"><h3>Checkout process</h3></li>
+			<li class="listamenupequeño"><h3>Redesign Product Detail Page</h3></li>
+			<li class="listamenupequeño"><h3>Redesign Product List Page</h3></li>
+			<li class="listamenupequeño"><h3>Create your suit</h3></li>
+		</ul>
+		<hr class="lineas"/>
+		<div class="botonesinferiores2"><img class="iconos2" src="img/emoji-chica.png"><h3>ABOUT</h3></div>
+		<hr class="lineas"/>
+		<div class="botonesinferiores2"><img class="iconos2" src="img/ordenador.png"><h3>MY PROCESS</h3></div>
+		<hr class="lineas"/>
+	</div>
+	<footer id="pie">
+		<span style="color: white;float: right; padding: 18px 40px 10px 18px">@ 2020 Cristina Pérez</span>
+	</footer>
+</body>
+</html>
